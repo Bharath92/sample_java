@@ -26,9 +26,9 @@ pipelines:
           runtime:
             type: image
             image:
-              auto:
-                language: nodejs
-                version: v4.8.5
+              custom:
+                name: drydock/u16microbase
+                version: latest
         triggeredBy:
           resources:
             - gitrepo_res 
