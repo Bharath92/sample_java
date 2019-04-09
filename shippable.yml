@@ -36,7 +36,7 @@ pipelines:
           onStart:
             - echo "onStart"
           onExecute:
-            - echo "execute karte hai bhai"
+            - echoffdg "execute karte hai bhai"
           onSuccess:
             - echo "onSuccess"
           onFailure:
