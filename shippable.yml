@@ -34,5 +34,6 @@ pipelines:
         execution:
           onStart:
             - echo "onStart"
+            - sleep 1m
           onExecute:
             - echo "execute karte hai bhai"
