@@ -25,6 +25,9 @@ pipelines:
         setup:
           runtime:
             type: image
+            custom:
+              name: drydock/u16pytall
+              tag: master
         requires:
           integrations:
             - github
