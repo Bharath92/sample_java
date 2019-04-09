@@ -28,7 +28,7 @@ pipelines:
             image:
               custom:
                 name: drydock/u16microbase
-                version: latest
+                tag: latest
         requires:
           integrations:
             - github
