@@ -39,7 +39,7 @@ pipelines:
           onStart:
             - echo "onStart"
           onExecute:
-            - echogff "execute karte hai bhai"
+            - echogff "execute karte bhai"
           onComplete:
             - echo "onComplete"
           onFailure:
