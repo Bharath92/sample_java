@@ -29,6 +29,9 @@ pipelines:
               custom:
                 name: drydock/u16microbase
                 version: latest
+        requires:
+          integrations:
+            - github
         execution:
           onExecute:
             - echo "execute karte hai bhai"
