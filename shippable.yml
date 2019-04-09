@@ -42,5 +42,3 @@ pipelines:
             - echogff "execute karte bhai"
           onComplete:
             - echo "onComplete"
-          onFailure:
-            - echo "onFailure"
