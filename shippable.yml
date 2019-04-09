@@ -29,6 +29,9 @@ pipelines:
               custom:
                 name: drydock/u16pytall
                 tag: master
+        triggeredBy:
+          resources:
+            - gitrepo_res
         requires:
           integrations:
             - github
