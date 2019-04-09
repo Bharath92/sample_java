@@ -33,5 +33,13 @@ pipelines:
           integrations:
             - github
         execution:
+          onStart:
+            - echo "onStart"
           onExecute:
             - echo "execute karte hai bhai"
+          onSuccess:
+            - echo "onSuccess"
+          onFailure:
+            - echo "onFailure"
+          onComplete:
+            - echo "onComplete"
