@@ -24,7 +24,7 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: host
+            type: image
         requires:
           integrations:
             - github
