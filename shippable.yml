@@ -29,9 +29,6 @@ pipelines:
               custom:
                 name: drydock/u16microbase
                 version: latest
-        triggeredBy:
-          resources:
-            - gitrepo_res 
         execution:
           onExecute:
             - echo "execute karte hai bhai"
