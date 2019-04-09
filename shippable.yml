@@ -24,11 +24,7 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: image
-            image:
-              custom:
-                name: drydock/u16microbase
-                tag: latest
+            type: host
         requires:
           integrations:
             - github
@@ -36,10 +32,4 @@ pipelines:
           onStart:
             - echo "onStart"
           onExecute:
-            - echoffdg "execute karte hai bhai"
-          onSuccess:
-            - echo "onSuccess"
-          onFailure:
-            - echo "onFailure"
-          onComplete:
-            - echo "onComplete"
+            - echo "execute karte hai bhai"
