@@ -38,8 +38,7 @@ pipelines:
         execution:
           onStart:
             - echo "onStart"
-            - sleep 5m
           onExecute:
-            - echogff "execute karte bhai"
+            - echo "Hello World"
           onComplete:
             - echo "onComplete"
