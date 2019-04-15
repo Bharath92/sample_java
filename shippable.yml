@@ -24,11 +24,7 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: image
-            image:
-              custom:
-                name: drydock/u16pytall
-                tag: master
+            type: host
         triggeredBy:
           resources:
             - gitrepo_res
