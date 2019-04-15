@@ -24,8 +24,9 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: image
+            type: auto
             image:
+              language: java
         triggeredBy:
           resources:
             - gitrepo_res
