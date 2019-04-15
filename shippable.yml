@@ -36,5 +36,6 @@ pipelines:
             - echo "onStart"
           onExecute:
             - echo "Hello World"
+            - cat $STEPLET_SCRIPT
           onComplete:
             - echo "onComplete"
