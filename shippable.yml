@@ -36,6 +36,7 @@ pipelines:
         execution:
           onStart:
             - echo "onStart"
+            - afsd
           onExecute:
             - echo "Hello World"
             - cat $STEPLET_SCRIPT_PATH
