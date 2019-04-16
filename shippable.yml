@@ -41,3 +41,7 @@ pipelines:
             - cat $STEPLET_SCRIPT_PATH
           onComplete:
             - echo "onComplete"
+          onSuccess:
+            - echo "onSuccess"
+          onFailure:
+            - echo "onFailure"
