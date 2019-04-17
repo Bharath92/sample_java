@@ -29,6 +29,7 @@ pipelines:
               custom:
                 name: drydock/u16all
                 tag: master
+                options: "-e foo=bar"
         triggeredBy:
           resources:
             - gitrepo_res
