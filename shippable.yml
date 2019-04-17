@@ -23,6 +23,9 @@ pipelines:
         configuration:
           affinityGroup: test_group 
         setup:
+          environmentVariables:
+            normal:
+              boo: far
           runtime:
             type: image
             image:
