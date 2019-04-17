@@ -39,7 +39,7 @@ pipelines:
           onExecute:
             - echo "Hello World"
             - cat $STEPLET_SCRIPT_PATH
-            - afsd
+            - echo yo
           onComplete:
             - echo "onComplete"
           onSuccess:
