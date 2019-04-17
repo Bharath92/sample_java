@@ -47,6 +47,7 @@ pipelines:
             - echo "Hello World"
             - cat $STEPLET_SCRIPT_PATH
             - echo yo
+            - echo $choo
           onComplete:
             - echo "onComplete"
           onSuccess:
