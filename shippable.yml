@@ -25,9 +25,10 @@ pipelines:
         setup:
           runtime:
             type: custom
-            custom:
-              name: drydock/u16all
-              tag: master
+            image:
+              custom:
+                name: drydock/u16all
+                tag: master
         triggeredBy:
           resources:
             - gitrepo_res
