@@ -24,9 +24,10 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: image
-            auto:
-              language: java
+            type: custom
+            custom:
+              name: drydock/u16all
+              tag: master
         triggeredBy:
           resources:
             - gitrepo_res
