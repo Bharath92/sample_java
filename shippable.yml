@@ -26,6 +26,7 @@ pipelines:
           environmentVariables:
             normal:
               boo: far
+              choo: $abcd`@
           runtime:
             type: image
             image:
