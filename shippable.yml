@@ -39,7 +39,7 @@ pipelines:
         #    - gitrepo_res
         requires:
           integrations:
-            - github
+            - docker
         execution:
           onStart:
             - echo "onStart"
