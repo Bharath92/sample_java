@@ -34,9 +34,9 @@ pipelines:
                 name: drydock/u16all
                 tag: master
                 options: "-e foo=bar"
-        #triggeredBy:
-        #  resources:
-        #    - gitrepo_res
+        triggeredBy:
+          resources:
+            - gitrepo_res
         requires:
           integrations:
             - docker
