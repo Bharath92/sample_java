@@ -45,7 +45,7 @@ pipelines:
             - echo "onStart"
           onExecute:
             - echo "Hello World"
-            #- cat $STEPLET_SCRIPT_PATH
+            - cat $STEPLET_SCRIPT_PATH
             - echo yo
             - echo $choo
             - echo $int_docker_password
