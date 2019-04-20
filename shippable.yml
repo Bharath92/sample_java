@@ -53,6 +53,7 @@ pipelines:
             - echo $choo
             - echo $int_docker_password
             - echo $readonlyfoo
+            - readonlyfoo=$foo
           onComplete:
             - echo "onComplete"
           onSuccess:
