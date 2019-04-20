@@ -48,6 +48,7 @@ pipelines:
             - cat $STEPLET_SCRIPT_PATH
             - echo yo
             - echo $choo
+            - echo $int_docker_password
           onComplete:
             - echo "onComplete"
           onSuccess:
