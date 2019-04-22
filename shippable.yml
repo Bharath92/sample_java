@@ -32,6 +32,7 @@ pipelines:
               choo: $abcd`@
             secure:
               bar: oPW1jPBkndpwxm8DwE8xfLF+jNzsdHU1gt+4bMRUCbcMgUa8BQto1hE9Tu2FIded8/2rCGxYIhrQDgiRg/zMn9raVT4DlHK7006gjoESeTPIq5KYsjYHn9VGr2dJ+jB9XXyLWb0pFSnRZCTrfL3P7qIqQw54yP9pTIw9Mqpzk5Juj1GCPgw6vag+SIIc3nd4ICt5BPIyQxMcP1UBKwnzIE0CAc/0JPnP9Lo0zvnzXZYFRSoAh08/jKL1rmtjMhb2WkPHGAfb6HnUgGyNBpN2HJO+jdG5tpXF94c3rB+ec6vMvMDuaoWL6ujrtPFq0AxxHMjzTQODNfVsxo8DzOk0jw==
+              joo: CN7ZMONxXRBEBP0wMQ78LtNIVhjs+LWqFqLgVzUXU+R9FDnAGNvTSwtO8ym7d5pD+aZLcwO1BqX/pOqck1yTpCs/T5lWPvBw+Ivo66JgnEjAgrgtl9v4dy/CkLGaOw7t4QGMeTLu3NLTfxQSKtrulv3kHfp337l10QkbaWeUnUBU3570DCfpBt/zSJqt1ePeW9TuVaYvseX5JA+Y5CMQJqiDWwLznCmQo+NrOJ4zvBnDw5S3qnWw2zDxqjtZ2xVwR+/7+agM2oBGg/J7EAG2IxZCQFzODxVNk1gzH+YxXhcWAPB3bH8V/WajnglpAk5AmUrMMgWZnZbFesF4z0lBWQ==
           runtime:
             type: image
             image:
@@ -56,6 +57,7 @@ pipelines:
             - echo $int_docker_password
             - echo $readonlyfoo
             - echo $bar
+            - echo $joo
             - readonlyfoo=$foo
           onComplete:
             - echo "onComplete"
