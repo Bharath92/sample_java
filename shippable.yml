@@ -10,9 +10,9 @@ resources:
 pipelines:
   - name: pipe_1
     setup:
-      environmentVariables:
-        readOnly:
-          readonlyfoo: readonlybar
+      #environmentVariables:
+      #  readOnly:
+      #    readonlyfoo: readonlybar
       runtime:
         type: image
         image:
