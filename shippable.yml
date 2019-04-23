@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     repoPath: bharath92/samplePyt
     configuration:
-      integrationName: github
+      integrationName: bharath_github
     initialVersion:
       sha: master
 
@@ -43,9 +43,9 @@ pipelines:
         triggeredBy:
           resources:
             - gitrepo_res
-        requires:
-          integrations:
-            - docker
+        #requires:
+        #  integrations:
+        #    - docker
         execution:
           onStart:
             - echo "onStart"
