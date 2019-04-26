@@ -11,6 +11,7 @@ resources:
     repoPath: bharath92/api
     configuration:
       integrationName: bharath_github
+      gitConfig: --test
     initialVersion:
       sha: master
 
