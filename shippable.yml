@@ -6,6 +6,13 @@ resources:
       integrationName: bharath_github
     initialVersion:
       sha: master
+  - name: gitrepo_res2
+    type: gitRepo
+    repoPath: bharath92/api
+    configuration:
+      integrationName: bharath_github
+    initialVersion:
+      sha: master
 
 pipelines:
   - name: pipe_1
