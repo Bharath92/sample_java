@@ -4,6 +4,9 @@ resources:
     repoPath: bharath92/samplePyt
     configuration:
       integrationName: bharath_github
+      shallowDepth: 1
+      gitConfig:
+        - --test
     initialVersion:
       sha: master
   - name: gitrepo_res2
