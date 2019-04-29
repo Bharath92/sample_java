@@ -4,7 +4,7 @@ resources:
     repoPath: bharath92/samplePyt
     configuration:
       integrationName: bharath_github
-      shallowDepth: 1
+      shallowDepth: 10
       gitConfig:
         - --test
     initialVersion:
