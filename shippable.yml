@@ -70,6 +70,8 @@ pipelines:
           onStart:
             - echo "onStart"
           onExecute:
+            - echo 'hi'
+            - echo '!@!$#%$^%&%&^*&('
             - echo "Hello World"
             - cat $STEPLET_SCRIPT_PATH
             - echo yo
