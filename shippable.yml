@@ -70,6 +70,7 @@ pipelines:
             - echo $bar
             - echo $joo
             - readonlyfoo=$foo
+            - cat $STEP_JSON_PATH
           onComplete:
             - echo "onComplete"
           onSuccess:
