@@ -4,9 +4,9 @@ resources:
     repoPath: bharath92/samplePyt
     configuration:
       integrationName: bharath_github
-      #shallowDepth: 10
-      #gitConfig:
-      #  - --test
+      shallowDepth: 2
+      gitConfig:
+        - --global core.editor
       buildOn:
         commit: true
         pullRequest: true
