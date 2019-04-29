@@ -6,7 +6,7 @@ resources:
       integrationName: bharath_github
       shallowDepth: 2
       gitConfig:
-        - --global core.editor vim
+        - --global core.editor emacs
       buildOn:
         commit: true
         pullRequest: true
