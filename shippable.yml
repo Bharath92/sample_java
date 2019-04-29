@@ -82,6 +82,10 @@ pipelines:
             - cat $STEP_JSON_PATH
             - cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.shallowDepth
             - cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.gitConfig
+            - git config --list
+            - pushd $(cat $STEP_JSON_PATH | jq .resources.gitrepo_res.repoPath)
+            - git log
+            - popd
           onComplete:
             - echo "onComplete"
           onSuccess:
