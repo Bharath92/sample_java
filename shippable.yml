@@ -71,6 +71,7 @@ pipelines:
             - echo $joo
             - readonlyfoo=$foo
             - cat $STEP_JSON_PATH
+            - cat $STEP_JSON_PATH | jq .resources.gitRepo_res.configPropertyBag.shallowDepth
           onComplete:
             - echo "onComplete"
           onSuccess:
