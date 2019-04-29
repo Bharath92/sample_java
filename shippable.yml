@@ -54,9 +54,9 @@ pipelines:
         #  resources:
         #    - gitrepo_res
         #    - gitrepo_res2
-        #requires:
-        #  integrations:
-        #    - docker
+        requires:
+          integrations:
+            - docker
         execution:
           onStart:
             - echo "onStart"
