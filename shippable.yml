@@ -50,10 +50,10 @@ pipelines:
                 name: drydock/u16microbase
                 tag: master
                 options: "-e optionfoo=bar"
-        triggeredBy:
-          resources:
-            - gitrepo_res
-            - gitrepo_res2
+        #triggeredBy:
+        #  resources:
+        #    - gitrepo_res
+        #    - gitrepo_res2
         #requires:
         #  integrations:
         #    - docker
