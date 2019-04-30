@@ -4,7 +4,7 @@ resources:
     repoPath: bharath92/samplePyt
     configuration:
       integrationName: bharath_github
-      shallowDepth: 2
+      shallowDepth: 11
       gitConfig:
         - --global core.editor emacs
       buildOn:
@@ -20,9 +20,6 @@ resources:
     repoPath: bharath92/api
     configuration:
       integrationName: bharath_github
-      shallowDepth: 1
-      gitConfig:
-        - --global core.editor vim
     initialVersion:
       sha: master
 
