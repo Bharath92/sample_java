@@ -62,7 +62,7 @@ pipelines:
         triggeredBy:
           resources:
             - gitrepo_res
-          #  - gitrepo_res2
+            - gitrepo_res2
         #requires:
         #  integrations:
         #    - docker
