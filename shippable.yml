@@ -22,7 +22,7 @@ resources:
       integrationName: bharath_github
       shallowDepth: 1
       gitConfig:
-        - --test
+        - --global core.editor vim
     initialVersion:
       sha: master
 
