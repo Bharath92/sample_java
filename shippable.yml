@@ -67,21 +67,21 @@ pipelines:
           onStart:
             - echo "onStart"
           onExecute:
-            - echo 'hi'
-            - echo '!@!$#%$^%&%&^*&('
-            - echo $optionfoo
-            - echo "Hello World"
-            - cat $STEPLET_SCRIPT_PATH
-            - echo yo
-            - echo $choo
-            - echo $int_docker_password
-            - echo $readonlyfoo
-            - echo $bar
-            - echo $joo
-            - readonlyfoo=$foo
-            - cat $STEP_JSON_PATH
-            - cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.shallowDepth
-            - cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.gitConfig
+            #- echo 'hi'
+            #- echo '!@!$#%$^%&%&^*&('
+            #- echo $optionfoo
+            #- echo "Hello World"
+            #- cat $STEPLET_SCRIPT_PATH
+            #- echo yo
+            #- echo $choo
+            #- echo $int_docker_password
+            #- echo $readonlyfoo
+            #- echo $bar
+            #- echo $joo
+            #- readonlyfoo=$foo
+            #- cat $STEP_JSON_PATH
+            #- cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.shallowDepth
+            #- cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.gitConfig
             - git config --list
             - pushd $(cat $STEP_JSON_PATH | jq -r .resources.gitrepo_res.resourcePath)/gitRepo
             - git log
