@@ -23,6 +23,23 @@ resources:
       integrationName: bharath_github
     initialVersion:
       sha: master
+  - name: admiralRepo
+    type: gitRepo
+    repoPath: bharath92/admiral
+    configuration:
+      integrationName: bharath_github
+      shallowDepth: 11
+      gitConfig:
+        - --global core.editor vim
+        - --global help.autocorrect 0
+      buildOn:
+        commit: true
+        pullRequest: true
+        pullRequestClose: true
+        release: true
+        tagPush: true
+    initialVersion:
+      sha: master
 
 pipelines:
   - name: pipe_1
@@ -60,7 +77,7 @@ pipelines:
         triggeredBy:
           resources:
             - gitrepo_res
-           # - gitrepo_res2
+            - admiralRepo
         #requires:
         #  integrations:
         #    - docker
