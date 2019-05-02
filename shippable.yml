@@ -103,6 +103,7 @@ pipelines:
             #- cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.shallowDepth
             #- cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.gitConfig
             - git config --list
+            - e
             #- pushd $(cat $STEP_JSON_PATH | jq -r .resources.gitrepo_res.resourcePath)/gitRepo
             #- git log
             #- popd
