@@ -81,6 +81,9 @@ pipelines:
         #requires:
         #  integrations:
         #    - docker
+        outputResources:
+          - gitrepo_res
+          - admiralRepo
         execution:
           onStart:
             - echo "onStart"
