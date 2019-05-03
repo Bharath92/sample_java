@@ -40,14 +40,21 @@ resources:
         tagPush: true
     initialVersion:
       sha: master
-  - name: myImage
+  - name: reqproc_repo
+    type: gitRepo
+    repoPath: bharath92/kermit-u16reqproc
+    configuration:
+      integrationName: bharath_github
+    initialVersion:
+      sha: master
+  - name: reqproc_img
     type: image
     configuration:
       integrationName: docker
-    imageName: bharath92/gitIssues   
+    imageName: bharath92/gitIssues
     initialVersion:
       imageTag: master
- 
+
 
 pipelines:
   - name: pipe_1
@@ -61,12 +68,10 @@ pipelines:
           custom:
             name: drydock/u16microbase
             tag: v7.2.4
-      
+
     steps:
-      - name: step1_A
+      - name: build_reqproc_img
         type: bash
-        configuration:
-          affinityGroup: test_group 
         setup:
           #environmentVariables:
           #  normal:
@@ -84,14 +89,13 @@ pipelines:
                 options: "-e optionfoo=bar"
         triggeredBy:
           resources:
-            - myImage
+            - reqproc_repo
         #    - gitrepo_res
-        requires:
-          integrations:
-            - docker
+        #requires:
+        #  integrations:
+      #      - docker
         outputResources:
-          - gitrepo_res2
-          - gitrepo_res
+          - reqproc_img
         execution:
           onStart:
             - echo "onStart"
@@ -121,3 +125,26 @@ pipelines:
             - echo "onSuccess"
           onFailure:
             - echo "onFailure"
+      - name: push_reqproc_img
+        type: bash
+        setup:
+          #environmentVariables:
+          #  normal:
+          #    boo: far
+          #    choo: $abcd`@
+          #  secure:
+          #    bar: oPW1jPBkndpwxm8DwE8xfLF+jNzsdHU1gt+4bMRUCbcMgUa8BQto1hE9Tu2FIded8/2rCGxYIhrQDgiRg/zMn9raVT4DlHK7006gjoESeTPIq5KYsjYHn9VGr2dJ+jB9XXyLWb0pFSnRZCTrfL3P7qIqQw54yP9pTIw9Mqpzk5Juj1GCPgw6vag+SIIc3nd4ICt5BPIyQxMcP1UBKwnzIE0CAc/0JPnP9Lo0zvnzXZYFRSoAh08/jKL1rmtjMhb2WkPHGAfb6HnUgGyNBpN2HJO+jdG5tpXF94c3rB+ec6vMvMDuaoWL6ujrtPFq0AxxHMjzTQODNfVsxo8DzOk0jw==
+          #    joo: CN7ZMONxXRBEBP0wMQ78LtNIVhjs+LWqFqLgVzUXU+R9FDnAGNvTSwtO8ym7d5pD+aZLcwO1BqX/pOqck1yTpCs/T5lWPvBw+Ivo66JgnEjAgrgtl9v4dy/CkLGaOw7t4QGMeTLu3NLTfxQSKtrulv3kHfp337l10QkbaWeUnUBU3570DCfpBt/zSJqt1ePeW9TuVaYvseX5JA+Y5CMQJqiDWwLznCmQo+NrOJ4zvBnDw5S3qnWw2zDxqjtZ2xVwR+/7+agM2oBGg/J7EAG2IxZCQFzODxVNk1gzH+YxXhcWAPB3bH8V/WajnglpAk5AmUrMMgWZnZbFesF4z0lBWQ==
+          runtime:
+            type: image
+            image:
+              custom:
+                name: drydock/u16microbase
+                tag: master
+                options: "-e optionfoo=bar"
+        triggeredBy:
+          resources:
+            - reqproc_img
+        execution:
+          onExecute:
+            - echo 'hi'
