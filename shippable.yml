@@ -82,7 +82,7 @@ pipelines:
         #  integrations:
         #    - docker
         outputResources:
-          - admiralRepo
+          - gitrepo_res2
           - gitrepo_res
         execution:
           onStart:
