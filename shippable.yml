@@ -42,7 +42,7 @@ resources:
       sha: master
   - name: reqproc_repo
     type: gitRepo
-    repoPath: bharath92/kermit-u16reqproc
+    repoPath: bharath92/kermit-reqproc
     configuration:
       integrationName: bharath_github
     initialVersion:
