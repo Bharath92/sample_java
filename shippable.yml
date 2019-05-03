@@ -40,6 +40,14 @@ resources:
         tagPush: true
     initialVersion:
       sha: master
+  - name: myImage
+    type: image
+    configuration:
+      integrationName: docker
+    imageName: bharath92/gitIssues   
+    initialVersion:
+      imageTag: master
+ 
 
 pipelines:
   - name: pipe_1
@@ -81,6 +89,7 @@ pipelines:
         requires:
           integrations:
             - docker
+            - myImage
         outputResources:
           - gitrepo_res2
           - gitrepo_res
@@ -100,7 +109,7 @@ pipelines:
             #- echo $bar
             #- echo $joo
             #- readonlyfoo=$foo
-            #- cat $STEP_JSON_PATH
+            - cat $STEP_JSON_PATH
             #- cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.shallowDepth
             #- cat $STEP_JSON_PATH | jq .resources.gitrepo_res.configPropertyBag.gitConfig
             - git config --list
