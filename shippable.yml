@@ -82,14 +82,13 @@ pipelines:
                 name: drydock/u16microbase
                 tag: master
                 options: "-e optionfoo=bar"
-        #triggeredBy:
-        #  resources:
-        #    - admiralRepo
+        triggeredBy:
+          resources:
+            - myImage
         #    - gitrepo_res
         requires:
           integrations:
             - docker
-            - myImage
         outputResources:
           - gitrepo_res2
           - gitrepo_res
