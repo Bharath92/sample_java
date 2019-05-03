@@ -78,9 +78,9 @@ pipelines:
         #  resources:
         #    - admiralRepo
         #    - gitrepo_res
-        #requires:
-        #  integrations:
-        #    - docker
+        requires:
+          integrations:
+            - docker
         outputResources:
           - gitrepo_res2
           - gitrepo_res
@@ -92,10 +92,10 @@ pipelines:
             #- echo '!@!$#%$^%&%&^*&('
             #- echo $optionfoo
             #- echo "Hello World"
-            #- cat $STEPLET_SCRIPT_PATH
+            - cat $STEPLET_SCRIPT_PATH
             #- echo yo
             #- echo $choo
-            #- echo $int_docker_password
+            - echo $int_docker_password
             #- echo $readonlyfoo
             #- echo $bar
             #- echo $joo
