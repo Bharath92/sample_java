@@ -74,15 +74,16 @@ pipelines:
                 name: drydock/u16microbase
                 tag: master
                 options: "-e optionfoo=bar"
-        triggeredBy:
-          resources:
-            - admiralRepo
+        #triggeredBy:
+        #  resources:
+        #    - admiralRepo
+        #    - gitrepo_res
         #requires:
         #  integrations:
         #    - docker
         outputResources:
-          #- admiralRepo
           - gitrepo_res
+          - admiralRepo
         execution:
           onStart:
             - echo "onStart"
