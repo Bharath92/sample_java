@@ -76,12 +76,12 @@ pipelines:
                 options: "-e optionfoo=bar"
         triggeredBy:
           resources:
-            - gitrepo_res
+            - admiralRepo
         #requires:
         #  integrations:
         #    - docker
         outputResources:
-          - admiralRepo
+          #- admiralRepo
           - gitrepo_res
         execution:
           onStart:
