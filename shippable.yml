@@ -89,7 +89,7 @@ pipelines:
         execution:
           onExecute:
             - echo $foo
-            - echo $$boo
+            - echo $boo
       - name: build_reqproc_img
         type: bash
         setup:
