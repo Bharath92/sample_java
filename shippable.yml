@@ -83,6 +83,8 @@ pipelines:
               foo: bar
               boo: $foo
               shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
           runtime:
             type: image
             image:
@@ -93,6 +95,9 @@ pipelines:
           onExecute:
             - echo $foo
             - echo $boo
+            - echo $shoo
+            - echo $moo
+            - echo $zoo
             - printenv
             - cat $STEPLET_SCRIPT_PATH
       - name: build_reqproc_img
