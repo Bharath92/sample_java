@@ -99,6 +99,7 @@ pipelines:
             - echo $shoo
             - echo $moo
             - echo $zoo
+            - echo $koo
             - printenv
             - cat $STEPLET_SCRIPT_PATH
       - name: build_reqproc_img
