@@ -72,10 +72,10 @@ pipelines:
     steps:
       - name: basic
         type: bash
+        requires:
+          integrations:
+            - docker
         setup:
-          requires:
-            integrations:
-              - docker
           environmentVariables:
             normal:
               foo: bar
