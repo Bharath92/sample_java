@@ -76,7 +76,7 @@ pipelines:
           integrations:
             - docker
           resources:
-            - gitrepo_res
+            - gitrepo_res2
         setup:
           environmentVariables:
             normal:
@@ -93,7 +93,7 @@ pipelines:
             - echo $foo
             - echo $boo
             - printenv
-            - cat $STEP_JSON_PATH
+            - cat $STEPLET_SCRIPT_PATH
       - name: build_reqproc_img
         type: bash
         setup:
