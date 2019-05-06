@@ -75,8 +75,8 @@ pipelines:
         requires:
           integrations:
             - docker
-          resources:
-            - gitrepo_res2
+          #resources:
+          #  - gitrepo_res2
         setup:
           environmentVariables:
             normal:
