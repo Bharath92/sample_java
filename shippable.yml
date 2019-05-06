@@ -79,7 +79,7 @@ pipelines:
           environmentVariables:
             normal:
               foo: bar
-              boo: $$foo
+              boo: $foo
           runtime:
             type: image
             image:
@@ -89,7 +89,7 @@ pipelines:
         execution:
           onExecute:
             - echo $foo
-            - echo $boo
+            - echo $$boo
       - name: build_reqproc_img
         type: bash
         setup:
