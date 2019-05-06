@@ -70,6 +70,23 @@ pipelines:
             tag: v7.2.4
 
     steps:
+      - name: basic
+        type: bash
+        setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+          runtime:
+            type: image
+            image:
+              custom:
+                name: drydock/u16microbase
+                tag: master
+        execution:
+          onExecute:
+            - echo $foo
+            - echo $boo
       - name: build_reqproc_img
         type: bash
         setup:
@@ -148,3 +165,4 @@ pipelines:
         execution:
           onExecute:
             - echo 'hi'
+            
