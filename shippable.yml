@@ -82,6 +82,7 @@ pipelines:
             normal:
               foo: bar
               boo: $foo
+              shoo: foo boo
           runtime:
             type: image
             image:
