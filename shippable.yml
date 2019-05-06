@@ -106,7 +106,7 @@ pipelines:
               custom:
                 name: drydock/u16microbase
                 tag: master
-                options: "-e optionfoo=bar"
+                options: "-e optionfoo=bar "
         triggeredBy:
           resources:
             - reqproc_repo
