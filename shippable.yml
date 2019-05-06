@@ -85,6 +85,7 @@ pipelines:
               shoo: foo boo
               moo: '"abc def"'
               zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
           runtime:
             type: image
             image:
