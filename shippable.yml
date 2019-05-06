@@ -73,6 +73,9 @@ pipelines:
       - name: basic
         type: bash
         setup:
+          requires:
+            integrations:
+              - docker
           environmentVariables:
             normal:
               foo: bar
