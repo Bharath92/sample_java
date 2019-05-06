@@ -79,7 +79,7 @@ pipelines:
           environmentVariables:
             normal:
               foo: bar
-              boo: $foo
+              boo: $$foo
           runtime:
             type: image
             image:
