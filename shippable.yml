@@ -90,6 +90,7 @@ pipelines:
           onExecute:
             - echo $foo
             - echo $boo
+            - printenv
       - name: build_reqproc_img
         type: bash
         setup:
