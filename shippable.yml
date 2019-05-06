@@ -93,6 +93,7 @@ pipelines:
             - echo $foo
             - echo $boo
             - printenv
+            - cat $STEP_JSON_PATH
       - name: build_reqproc_img
         type: bash
         setup:
