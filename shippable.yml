@@ -75,6 +75,7 @@ pipelines:
         requires:
           integrations:
             - docker
+            - gcloud
           #resources:
           #  - gitrepo_res2
         setup:
