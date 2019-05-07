@@ -87,7 +87,7 @@ pipelines:
               moo: '"abc def"'
               zoo: '"\$a$foo"'
               koo: \(\)\$\\\!\@#%^*
-              STEP_DOCKER_IMAGE: drydock/u16microbase:v7.2.4
+              IMAGE_TAG: v7.2.4
             secure:
               securefoo: qt/1lrsQSyC/ySCDr+19zmClURHst9PYEWLDVQVj8cjJxmTUWF1jrudBRbVZHH8/9fBAf2zPyFyQrQji0qBtESm+UjIzfDwr0I6kD+I89onVT2I/9Pq+RB3igEgJQB9Uycb1cxwTyvP6Kw1vH9ulVFb7DZBnc5Mngrmzv2iMPv9c2hv4tmltKWyGeB/UPIqqfadBrgj7lfimhIvr7tcHGG7XuLfI9yEf2hbaoqfPFWnIC8aoMrazkeyNuEUYCQzwy4l8YIOT06rFY5ajiDQkpKibePxMRGyF0QL0cdqU8guRxcEpfZNg/7/81SWkqlUiRMrf20jyVVdUxepac0dGKg==
           runtime:
@@ -95,7 +95,7 @@ pipelines:
             image:
               custom:
                 name: drydock/u16microbase
-                tag: master
+                tag: $IMAGE_TAG
         execution:
           onExecute:
             - echo $foo
