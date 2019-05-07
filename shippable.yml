@@ -98,6 +98,7 @@ pipelines:
                 tag: $IMAGE_TAG
         execution:
           onExecute:
+            - docker ps -a
             - echo $foo
             - echo $boo
             - echo $shoo
