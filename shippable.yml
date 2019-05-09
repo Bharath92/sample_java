@@ -91,11 +91,11 @@ pipelines:
             #secure:
             #  securefoo: qt/1lrsQSyC/ySCDr+19zmClURHst9PYEWLDVQVj8cjJxmTUWF1jrudBRbVZHH8/9fBAf2zPyFyQrQji0qBtESm+UjIzfDwr0I6kD+I89onVT2I/9Pq+RB3igEgJQB9Uycb1cxwTyvP6Kw1vH9ulVFb7DZBnc5Mngrmzv2iMPv9c2hv4tmltKWyGeB/UPIqqfadBrgj7lfimhIvr7tcHGG7XuLfI9yEf2hbaoqfPFWnIC8aoMrazkeyNuEUYCQzwy4l8YIOT06rFY5ajiDQkpKibePxMRGyF0QL0cdqU8guRxcEpfZNg/7/81SWkqlUiRMrf20jyVVdUxepac0dGKg==
           runtime:
-            type: image
-            image:
-              custom:
-                name: drydock/u16microbase
-                tag: $IMAGE_TAG
+            type: host
+            #image:
+            #  custom:
+            #    name: drydock/u16microbase
+            #    tag: $IMAGE_TAG
         execution:
           onExecute:
             - docker ps -a
