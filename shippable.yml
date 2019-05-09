@@ -112,6 +112,9 @@ pipelines:
             #- gcloud auth activate-service-account --key-file=test.json
             - sleep 1m
             - echo hi
+            - sleep 1m
+            - echo lol
+            - sleep 1m
             - echo bye
       - name: build_reqproc_img
         type: bash
