@@ -109,7 +109,7 @@ pipelines:
             - printenv
             - cat $STEPLET_SCRIPT_PATH
             - echo $int_gcloud_jsonKey > test.json
-            - gcloud auth activate-service-account --key-file=test.json
+            #- gcloud auth activate-service-account --key-file=test.json
             - sleep 1m
             - echo hi
             - echo bye
