@@ -72,8 +72,8 @@ pipelines:
     steps:
       - name: basic
         type: bash
-        configuration:
-          timeoutSeconds: 10
+        #configuration:
+        #  timeoutSeconds: 10
         requires:
           integrations:
             - docker
