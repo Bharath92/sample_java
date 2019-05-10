@@ -73,7 +73,7 @@ pipelines:
       - name: basic
         type: bash
         configuration:
-          timeoutSeconds: 3602
+          timeoutSeconds: 3603
         requires:
           integrations:
             - docker
