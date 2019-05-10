@@ -76,8 +76,8 @@ pipelines:
           integrations:
             - docker
             - gcloud
-          resources:
-            - admiralRepo
+          #resources:
+          #  - admiralRepo
         setup:
           environmentVariables:
             normal:
