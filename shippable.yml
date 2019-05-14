@@ -78,8 +78,9 @@ pipelines:
           integrations:
             - docker
             - gcloud
-          #resources:
-          #  - admiralRepo
+          resources:
+            - admiralRepo
+            - gitrepo_res2
         setup:
           environmentVariables:
             normal:
@@ -96,7 +97,7 @@ pipelines:
             type: image
             image:
               custom:
-                name: drydock/u16microbase
+                name: drydock/c7
                 tag: $IMAGE_TAG
         execution:
           onExecute:
@@ -112,11 +113,11 @@ pipelines:
             - cat $STEPLET_SCRIPT_PATH
             - echo $int_gcloud_jsonKey > test.json
             #- gcloud auth activate-service-account --key-file=test.json
-            - sleep 1m
+            #- sleep 1m
             - echo hi
-            - sleep 1m
+            #- sleep 1m
             - echo lol
-            - sleep 1m
+            #- sleep 1m
             - echo bye
       - name: build_reqproc_img
         type: bash
