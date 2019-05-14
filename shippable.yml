@@ -73,7 +73,7 @@ pipelines:
       - name: basic
         type: bash
         configuration:
-          nodePool: 10
+          nodePool: "test"
         requires:
           integrations:
             - docker
