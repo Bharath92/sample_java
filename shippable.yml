@@ -102,7 +102,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            #- sleep 5m
+            - sleep 5m
             - docker ps -a
             - echo $foo
             - echo $boo
