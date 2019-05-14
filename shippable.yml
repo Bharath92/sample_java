@@ -80,7 +80,7 @@ pipelines:
             - gcloud
           resources:
             - admiralRepo
-          #  - gitrepo_res2
+            - gitrepo_res2
         setup:
           environmentVariables:
             normal:
