@@ -78,9 +78,9 @@ pipelines:
           integrations:
             - docker
             - gcloud
-          resources:
-            - admiralRepo
-            - gitrepo_res2
+          #resources:
+          #  - admiralRepo
+          #  - gitrepo_res2
         setup:
           environmentVariables:
             normal:
@@ -101,6 +101,7 @@ pipelines:
                 tag: $IMAGE_TAG
         execution:
           onExecute:
+            - printenv
             - docker ps -a
             - echo $foo
             - echo $boo
