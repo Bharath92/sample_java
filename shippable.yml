@@ -78,9 +78,9 @@ pipelines:
           integrations:
             - docker
             - gcloud
-          resources:
-            - admiralRepo
-            - gitrepo_res2
+          #resources:
+          #  - admiralRepo
+          #  - gitrepo_res2
         setup:
           environmentVariables:
             normal:
@@ -91,8 +91,8 @@ pipelines:
               zoo: '"\$a$foo"'
               koo: \(\)\$\\\!\@#%^*
               IMAGE_TAG: master
-            #secure:
-            #  securefoo: qt/1lrsQSyC/ySCDr+19zmClURHst9PYEWLDVQVj8cjJxmTUWF1jrudBRbVZHH8/9fBAf2zPyFyQrQji0qBtESm+UjIzfDwr0I6kD+I89onVT2I/9Pq+RB3igEgJQB9Uycb1cxwTyvP6Kw1vH9ulVFb7DZBnc5Mngrmzv2iMPv9c2hv4tmltKWyGeB/UPIqqfadBrgj7lfimhIvr7tcHGG7XuLfI9yEf2hbaoqfPFWnIC8aoMrazkeyNuEUYCQzwy4l8YIOT06rFY5ajiDQkpKibePxMRGyF0QL0cdqU8guRxcEpfZNg/7/81SWkqlUiRMrf20jyVVdUxepac0dGKg==
+            secure:
+              securefoo: F/8PNamNsc895zi+mt6c1yfp/5tgpBsI8EyDYun4SXv8q6Gtv2nwVqeFoPRm5byp1fNC4AI4+v6KfImC/qWnKvdZ7Ha45LFHHI4oUUnLyGUc9yVwHFxUi9B6SIyDEXpXOgSB3VM88F8Fw1Z77tfB0mnPp6k672wo90L+NF7L+jPZVTHTQJfrbD2kbw491FIL6TTf9WnRuItCHCDFem22agC9liV09JDAIKUKOMvptKjWD9IEcEHqweTqdOG7kMBzTuxFd0dIHG8BSYP4KoTdVqOBnG3+z94G6Gh9i5XVujENnUVM3DsiEbAzHAmK2zNl8U64/ATsUmLrbdlUJr5nsg==
           runtime:
             type: image
             image:
