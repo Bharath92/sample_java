@@ -92,7 +92,7 @@ pipelines:
               koo: \(\)\$\\\!\@#%^*
               IMAGE_TAG: master
             encrypted:
-              securefoo: F/8PNamNsc895zi+mt6c1yfp/5tgpBsI8EyDYun4SXv8q6Gtv2nwVqeFoPRm5byp1fNC4AI4+v6KfImC/qWnKvdZ7Ha45LFHHI4oUUnLyGUc9yVwHFxUi9B6SIyDEXpXOgSB3VM88F8Fw1Z77tfB0mnPp6k672wo90L+NF7L+jPZVTHTQJfrbD2kbw491FIL6TTf9WnRuItCHCDFem22agC9liV09JDAIKUKOMvptKjWD9IEcEHqweTqdOG7kMBzTuxFd0dIHG8BSYP4KoTdVqOBnG3+z94G6Gh9i5XVujENnUVM3DsiEbAzHAmK2zNl8U64/ATsUmLrbdlUJr5nsg==
+              securefoo: ZQ7OTq9G4ac1U7NWl338y9m6qrdL0rOHq3HRPPVWPF2eTDwMWYCKffYvXEy04EonJpSkBcCfOlWx9rXywhTTkJ5F7JjGNzGgFf8Sy0areABsuYOyFPjbg0zyuzTMU/XIXKxmVfI6LNGGgTmKKumnuDKSjw8jDC8GsR4cXCP91KyNNZNAgrTU6ysn6Ko6X1XHDaI7kCMnucB79UHZd7uCxVtyWcnTed0qqbdgF32v5C4OMx1jBjW7UDXgEtQH6aDU31yqx2ICMyqjIjxvA5KuYyECLlHpYgh+1VDyd5AjxK8G+55O9Z//kuMGGnCJTMr3LL06J1fQdWz9g255VdseQg==
           runtime:
             type: image
             image:
