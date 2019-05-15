@@ -91,7 +91,7 @@ pipelines:
               zoo: '"\$a$foo"'
               koo: \(\)\$\\\!\@#%^*
               IMAGE_TAG: master
-            secure:
+            encrypted:
               securefoo: F/8PNamNsc895zi+mt6c1yfp/5tgpBsI8EyDYun4SXv8q6Gtv2nwVqeFoPRm5byp1fNC4AI4+v6KfImC/qWnKvdZ7Ha45LFHHI4oUUnLyGUc9yVwHFxUi9B6SIyDEXpXOgSB3VM88F8Fw1Z77tfB0mnPp6k672wo90L+NF7L+jPZVTHTQJfrbD2kbw491FIL6TTf9WnRuItCHCDFem22agC9liV09JDAIKUKOMvptKjWD9IEcEHqweTqdOG7kMBzTuxFd0dIHG8BSYP4KoTdVqOBnG3+z94G6Gh9i5XVujENnUVM3DsiEbAzHAmK2zNl8U64/ATsUmLrbdlUJr5nsg==
           runtime:
             type: image
@@ -102,7 +102,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - sleep 5m
+            #- sleep 5m
             - docker ps -a
             - echo $foo
             - echo $boo
