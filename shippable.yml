@@ -72,15 +72,15 @@ pipelines:
     steps:
       - name: basic
         type: bash
-        #configuration:
-        #  nodePool: "test"
+        configuration:
+          nodePool: "kermit_u18_pool"
         requires:
           integrations:
             - docker
             - gcloud
-          #resources:
-          #  - admiralRepo
-          #  - gitrepo_res2
+          resources:
+            - admiralRepo
+            - gitrepo_res2
         setup:
           environmentVariables:
             normal:
@@ -92,7 +92,7 @@ pipelines:
               koo: \(\)\$\\\!\@#%^*
               IMAGE_TAG: master
             encrypted:
-              securefoo: MIbXRLLiC/w+5Qeh0IB05K6LFMd5J6xiNpmnWj3WHaTTzC2AwLl90/SXO7EXhdiLXm9Ps9Cu6epxtv+YTDoVhK1rJ5lLDIDHqikzCxNoj8dJ5oKAOcNMNCuzh9sStqFN+3DmigAamGCsEgXUT3FnHG9XCwO3yAVRHj8z9GmSYIQhule+LVVE3NBRw68DTFqr5zkpLRAXA34btBCWjP2VJRAKstsYNoKq2qUWq6G6wwI0NXfLGX7c2NcX6rTGkV6Dy6nonpw9ZKYxefCw8giTm3HEYzRkyBDMIXQ4bVzHOhSyeAy9xvy06jYAqHpvXKpiuFW+zo0YkElpnsmk7yXqYw==
+              securefoo: unBnFxWYF6vgOg5+YiOYkdfLyCd2QEQZ7PnHA9OXW3uJuDdjF+8xlXOV1AFq8XY5R9iwM6HmGdkbP31HMwOczIJA+JrquWhxwsvfdQQk8anPtg/AsMfvCJPUfMhyA1xS+5us6wf4XA8DcWpLzLbBCs9ZoyAL8zd/uEgvQFeMcRsuHdoK7zeeeJG0bGwGWJQIuR+pMpo/6s5MGLLmbW+fOadHgbzTC89KZ13WjJdXxEQLEWDI2Lzw+gfFl/u5h5r4jBIvckunAnqWkQ0mBQDIpdBtjaZnLAR74mPRTLXKNoAMjoG6eH3EVHuh0fQJs7qrc4gI9bnfKAox7rK4/lghiQ==
           runtime:
             type: image
             image:
